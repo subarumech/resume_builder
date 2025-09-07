@@ -1,27 +1,64 @@
 # AI Resume Customization Instructions
 
-## Your Task
-Read `my_achievements.md` and `job_posting.md`, then create a customized resume that matches the job requirements.
+## Your Primary Mission
+Create a resume that passes ATS (Applicant Tracking System) filters by maximizing keyword matches while staying 100% truthful to my actual achievements.
 
-## Instructions
-1. **Read the job posting** in `job_posting.md` to understand what the employer is looking for
-2. **Review my achievements** in `my_achievements.md` to see all my experience and skills
-3. **Select the most relevant experiences** (3-4 jobs) that best match the job requirements
-4. **Customize the achievement bullets** to emphasize skills and experience that align with the job posting
-5. **Choose relevant skills** from my skills sections that match what the employer wants
-6. **Make a LaTeX file based on the layout of base_resume.tex** with the customized content
+## Step-by-Step Process
 
-## Guidelines
-- Stay truthful to my actual experiences - don't make things up
-- Use keywords from the job posting where they naturally fit
-- Emphasize quantified results and specific achievements
-- Keep the same professional LaTeX formatting as the original
-- Focus on the most relevant and impressive accomplishments
-- Make sure the resume tells a coherent story about why I'm a good fit for this role
+### 1. ATS Keyword Analysis
+Read `job_posting.md` and identify:
+- **Technical keywords** (software, tools, methodologies, certifications)
+- **Industry terms** (regulatory standards, processes, equipment)
+- **Action verbs** commonly used in engineering/PM roles
+- **Quantifiable metrics** they're looking for
+- **Required qualifications** that must appear verbatim
 
-## Output
-Create a new LaTeX file called `customized_resume.tex` in the root directory that I can compile to PDF.
+Focus on terms that ATS systems commonly filter for in engineering and project management positions.
+
+### 2. Achievement Deep-Dive
+Review `my_achievements.md` and for each relevant experience:
+- Identify which ATS keywords I can legitimately claim
+- Look for opportunities to add technical specificity
+- Find quantifiable results that weren't explicitly stated
+- **ASK ME QUESTIONS** if you need clarification to maximize keyword inclusion
+
+Example questions you could ask:
+- "What specific software versions did you use at Neuralink?"
+- "What was the budget range for those facility projects?"
+- "Which regulatory standards did you work with?"
+- "What manufacturing methodologies did you implement?"
+
+### 3. Professional Rewriting Rules
+- **Concise and data-driven**: Every bullet should have metrics when possible
+- **Engineering-focused language**: Use precise technical terminology
+- **ATS optimization**: Work in as many relevant keywords as naturally possible
+- **Professional tone**: Formal but not overly verbose
+- **Action-result format**: "Did X which resulted in Y" structure
+
+### 4. Resume Creation Guidelines
+- Select 3-4 most relevant job experiences
+- Rewrite achievement bullets to maximize ATS keyword density
+- Prioritize skills that match job requirements exactly
+- Use the same terminology as the job posting when describing my experience
+- **Make a LaTeX file based on the layout of base_resume.tex**
+
+## Critical Rules
+1. **NEVER fabricate** - Only use achievements I actually accomplished
+2. **ASK QUESTIONS** - If unsure about details that could add keywords, ask me
+3. **Stay truthful** - Enhance presentation but never invent experience
+4. **Maximize keywords** - Work in every legitimate keyword possible
+5. **Be specific** - Use exact tool names, standards, methodologies I actually used
+
+## Output Requirements
+- Create `customized_resume.tex` that compiles cleanly
+- Maximize ATS keyword matches from the job posting
+- Maintain professional engineering/PM language
+- Include quantified achievements wherever possible
+- Ask clarifying questions to extract maximum keyword potential
+
+## Remember
+Your goal is to help me get past the ATS filter by presenting my real achievements in the most keyword-rich, professionally optimized way possible. Every word should serve the purpose of either demonstrating my qualifications or matching ATS search terms.
 
 ---
 
-*To use this system: Update `job_posting.md` with the job you're applying for, then ask the AI to follow these instructions.*
+*Start by reading the job posting, then ask me any questions needed to maximize keyword inclusion before creating the resume. Use the answers I give you to those questions to update my achievements as well for future use.*

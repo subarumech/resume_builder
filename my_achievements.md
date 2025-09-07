@@ -17,11 +17,10 @@ Project Manager, Mechanical Engineer, and Facility Coordinator. Proven ability t
 ## Job Experiences
 
 ### CURIS System - Project Manager (March 2025 – Present) | Orlando, FL
-- Managed engineering team
-- Led efforts in scaling design and manufacturing operations
-- Implemented R&D design processes for corporate alignment
-- Helped build ERP system for project management
-- Used project management texhniques
+- Managed engineering team of 5 people, mentoring two early-career engineers on mechanical design and fail-fast methodologies
+- Led efforts in scaling design and manufacturing operations with facility projects ranging from $200,000 to $20,000,000
+- Implemented R&D design processes for corporate alignment and ERP system integration
+- Interacted with external vendors and customers for project management and procurement
 - Directed multi-million dollar facility bio-decontamination system integrations
 - Directed in-house R&D for next-generation product development
 - Designed a product line from scratch. A portable sensor array. Did all of the mechanical, electrical, and software for it. And failure testing.
@@ -35,10 +34,11 @@ Project Manager, Mechanical Engineer, and Facility Coordinator. Proven ability t
 - Voluntarily left to pursue a significantly improved offer from a previous interview that was done before taking a job here.
 
 ### Neuralink - Production Facility Coordinator (March 2023 – June 2024) | Austin, TX
-- Directed the construction and facilitization of a new manufacturing facility and lab.
-- Managed budgets, schedules, and lean initiatives to achieve a 10x increase in N1 brain implant production capacity.
-- Managed construction schedules, upgrade installations, and project budgets.
-- Led the construction of three full-scale production lines, cleanroom HVAC and power installations, medical-grade water systems, and dozens of other major improvements to pass regulatory compliance audits from the FDA and USDA.
+- Directed the construction and facilitization of a new manufacturing facility and lab with budgets in the tens of millions
+- Managed budgets, schedules, and lean initiatives to achieve a 10x increase in N1 brain implant production capacity
+- Interacted with external vendors and contractors for construction and machine purchases
+- Led the construction of three full-scale production lines, cleanroom HVAC and power installations, medical-grade water systems, and dozens of other major improvements to pass regulatory compliance audits from the FDA and USDA
+- Ensured compliance with 21 CFR 820 (Design Controls) and 21 CFR 812 (Investigational Device Exemptions)
 - Designed and implemented mechanical assemblies to handle delicate brain implants to build, transport, and mount them
 - Wrote large amounts of lab documentation and instructions
 - Used tools like SolidWorks, Revit, and Google Workspace
@@ -47,6 +47,7 @@ Project Manager, Mechanical Engineer, and Facility Coordinator. Proven ability t
 - Acted as a Manufacturing Engineer, optimizing processes with SolidWorks and RCA
 - Reduced deviations of some steps by up to 30% with hardware I designed, built, tested, and rolled into the line.
 - Personally designed, built, and programmed a custom, auto-failover, pressurized gas system for the clean room gas supplies.
+- Built Neuralink's entire inventory system from the ground up, both physically and in software, until software team integrated it into ERP system
 - Authored work instructions, validations, process maps, and maintenance protocols for N1 brain implant assembly.
 - Built N1 devices, tooling, and the manufacturing line itself. Utilized every tool imaginable, from microfab and probe stations to forklifts and lathes.
 
