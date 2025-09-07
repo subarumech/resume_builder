@@ -34,9 +34,11 @@ Example questions you could ask:
 - **ATS optimization**: Work in as many relevant keywords as naturally possible
 - **Professional tone**: Formal but not overly verbose
 - **Action-result format**: "Did X which resulted in Y" structure
+- **Avoid repetitive phrases**: Don't end multiple sentences with the same phrase (e.g., "in manufacturing environment") - vary sentence structure and integrate keywords naturally
 
 ### 4. Resume Creation Guidelines
-- Select 3-4 most relevant job experiences
+- **Include ALL positions** from my_achievements.md in every resume
+- **Bullet point limits**: Maximum 4 bullets for the 2 most important positions, maximum 3 bullets for all other positions
 - Rewrite achievement bullets to maximize ATS keyword density
 - Prioritize skills that match job requirements exactly
 - Use the same terminology as the job posting when describing my experience
@@ -55,6 +57,8 @@ Example questions you could ask:
 - Maintain professional engineering/PM language
 - Include quantified achievements wherever possible
 - Ask clarifying questions to extract maximum keyword potential
+- **File Organization**: Place finished resumes in folders organized by employer name, with files named using the standard format: `[JobID]_[PositionTitle].tex` (e.g., `12345_Senior_Software_Engineer.tex` or `Senior_Project_Manager.tex` if no Job ID is available). If a folder for the specific employer does not exist, create one to organize the resume properly.
+- **PDF Title**: The LaTeX `\pdftitle{}` should match the .tex filename (e.g., for `696298BR_Manufacturing_Engineer.tex`, use `\pdftitle{696298BR_Manufacturing_Engineer}`).
 
 ## Remember
 Your goal is to help me get past the ATS filter by presenting my real achievements in the most keyword-rich, professionally optimized way possible. Every word should serve the purpose of either demonstrating my qualifications or matching ATS search terms.

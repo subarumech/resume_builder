@@ -28,7 +28,7 @@ Project Manager, Mechanical Engineer, and Facility Coordinator. Proven ability t
 ### MTronPTI - Manufacturing Engineer (Feb 2025 – March 2025) | Orlando, FL
 - Enhanced manufacturing processes for DoD suppliers
 - Created detailed assembly work instructions
-- Created technical drawings and mechanical drawings in SolidWorks
+- Created technical drawings and mechanical drawings in SolidWorks with GD&T (Geometric Dimensioning and Tolerancing) standards
 - Applied lean manufacturing principles
 - Built a station from scratch for precisely heating and flowing solder and precisely tinning the leads on delicate oscillator assemblies.
 - Voluntarily left to pursue a significantly improved offer from a previous interview that was done before taking a job here.
@@ -44,8 +44,8 @@ Project Manager, Mechanical Engineer, and Facility Coordinator. Proven ability t
 - Used tools like SolidWorks, Revit, and Google Workspace
 
 ### Neuralink - Manufacturing Technician (March 2022 – March 2023) | Austin, TX
-- Acted as a Manufacturing Engineer, optimizing processes with SolidWorks and RCA
-- Reduced deviations of some steps by up to 30% with hardware I designed, built, tested, and rolled into the line.
+- Acted as a Manufacturing Engineer, optimizing processes with SolidWorks and RCCA (Root Cause and Corrective Action)
+- Reduced deviations of some steps by up to 30% using formal RCCA processes with hardware I designed, built, tested, and rolled into the line.
 - Personally designed, built, and programmed a custom, auto-failover, pressurized gas system for the clean room gas supplies.
 - Built Neuralink's entire inventory system from the ground up, both physically and in software, until software team integrated it into ERP system
 - Authored work instructions, validations, process maps, and maintenance protocols for N1 brain implant assembly.
@@ -68,7 +68,7 @@ Project Manager, Mechanical Engineer, and Facility Coordinator. Proven ability t
 Project planning and scheduling, lab management, employee leadership and mentorship, budget and cost control, risk management, production planning, production control, ERP systems
 
 ### Mechanical Engineering
-Rapid tooling and process design, advanced RCA resolution, FEA, agile manufacturing design, product development, thermal management systems, design for manufacturing, assembly work instructions
+Rapid tooling and process design, advanced RCCA (Root Cause and Corrective Action) resolution, FEA, agile manufacturing design, product development, thermal management systems, design for manufacturing, assembly work instructions, GD&T (Geometric Dimensioning and Tolerancing)
 
 ### Facilities / Construction
 Facility management/leadership, high-pressure gas systems, project management, cleanroom standards, OSHA safety protocols, HVAC, clean water systems, architectural design reviews, construction coordination and facilitation
@@ -77,4 +77,7 @@ Facility management/leadership, high-pressure gas systems, project management, c
 Sensitive electronics assembly, cleanroom experience, authoring work instructions, CNC mills/lathes, microfabrication equipment, cryogenics, hydraulics, lean manufacturing, production planning, heavy machinery, hand tools, lean six sigma, production control, MRP
 
 ### Software
-SolidWorks, Microsoft Project, Microsoft Office (including Excel), Jira, Revit, Siemens NX, ERP systems, Python, Google Workspace, Visual Studio Code, Fusion.
+SolidWorks (primary CAD software - no CREO/ProE experience), Microsoft Project, Microsoft Office (including Excel), Jira, Revit, Siemens NX, ERP systems, Python, Google Workspace, Visual Studio Code, Fusion.
+
+### Security Clearance
+No current or previous security clearances held. U.S. citizen eligible for security clearance.

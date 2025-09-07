@@ -1,0 +1,387 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={696298BR_Manufacturing_Engineer},
+    pdfauthor={Mike Moran},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    % \usepackage[T1]{fontenc} % this breaks sb2nov
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small Mike Moran - Page \thepage{} of \pageref*{LastPage}}
+}{}{} % replace number by desired string
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\circ$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{}\hspace{\widthof{}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \placelastupdatedtext
+    \begin{header}
+        \textbf{\fontsize{24 pt}{24 pt}\selectfont Mike Moran}
+
+        \vspace{0.3 cm}
+
+        \normalsize
+        \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}Orlando, FL}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:michaelamoranwork@gmail.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}michaelamoranwork@gmail.com}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:+941-894-8801}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}941-894-8801}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/michael-moran-fl/}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}linkedin.com/in/michael-moran-fl}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+    \end{header}
+
+    \vspace{0.40 cm}
+
+
+    \section{Profile}
+
+
+
+        
+        \begin{onecolentry}
+        
+            Manufacturing Engineer with 4+ years of production engineering experience in advanced manufacturing environments. Proven expertise in translating complex engineering blueprints into technical work instructions, implementing LEAN Six Sigma process improvements, and developing automation solutions for electro-mechanical assemblies. Strong background in cross-functional teaming, RCCA processes, GD\&T standards, and manufacturing environment optimization. U.S. citizen eligible for security clearance.
+            
+        \end{onecolentry}
+
+        \vspace{0.3 cm}
+
+
+    
+
+    \section{Education}
+
+\vspace{0.2 cm}
+        
+        \begin{twocolentry}{
+            
+            
+        \textit{Aug 2017 – Dec 2021}}
+            \textbf{University of Florida}
+            
+            \textit{B.S. in Mechanical Engineering}
+        \end{twocolentry}
+
+        \vspace{0.15 cm}
+        
+
+\vspace{0.3 cm}
+
+    
+    \section{Experience}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+        \textit{Orlando, FL}    
+            
+        \textit{March 2025 – Present}}
+            \textbf{Project Manager}
+            
+            \textit{CURIS System}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Managed engineering team of 5 people, mentoring early-career engineers on mechanical design and lean manufacturing methodologies in production engineering environment.
+                \item Led cross-functional teaming efforts in scaling design and manufacturing operations with facility projects ranging from \$200,000 to \$20,000,000.
+                \item Implemented R\&D design processes for corporate alignment and ERP system integration, contributing to process improvements and manufacturing environment optimization.
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.35 cm}
+
+        \begin{twocolentry}{
+        \textit{Orlando, FL}    
+            
+        \textit{Feb 2025 – March 2025}}
+            \textbf{Manufacturing Engineer}
+            
+            \textit{MTronPTI}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Enhanced manufacturing processes for DoD suppliers, applying LEAN Six Sigma manufacturing principles and total quality management techniques in production engineering environment.
+                \item Designed and built custom manufacturing station from scratch for precisely heating and flowing solder, implementing automation solutions for delicate oscillator assemblies.
+                \item Created detailed technical work instructions and assembly procedures, translating engineering blueprints and parts lists into comprehensive manufacturing documentation.
+                \item Developed technical drawings and mechanical drawings using SolidWorks with GD\&T (Geometric Dimensioning and Tolerancing) standards, contributing to process improvements and manufacturing environment optimization.
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.35 cm}
+
+        \begin{twocolentry}{
+        \textit{Austin, TX}    
+            
+        \textit{March 2023 – June 2024}}
+            \textbf{Production Facility Coordinator}
+            
+            \textit{Neuralink}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Directed construction and facilitization of manufacturing facility with budgets exceeding \$5M, optimizing production engineering processes to achieve 10x increase in production capacity.
+                \item Led cross-functional teaming efforts with manufacturing, equipment, and facilities engineering teams to drive process improvements and business outcomes.
+                \item Implemented LEAN Six Sigma improvement initiatives, developing process improvements to lower cost, increase quality, and deliver repeatable products faster.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.35 cm}
+
+        \begin{twocolentry}{
+        \textit{Austin, TX}    
+            
+        \textit{March 2022 – March 2023}}
+            \textbf{Manufacturing Technician}
+            
+            \textit{Neuralink}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Acted as Manufacturing Engineer, optimizing production engineering processes using formal RCCA (Root Cause and Corrective Action) methodologies and reducing manufacturing deviations by up to 30\% through process development.
+                \item Authored comprehensive technical work instructions, validations, process maps, and maintenance protocols for electro-mechanical assembly operations.
+                \item Designed, built, and programmed an automated failover pressurized gas system for clean room operations, demonstrating troubleshooting and new development capabilities.
+                \item Utilized comprehensive manufacturing equipment from microfabrication and probe stations to CNC mills and lathes in production engineering environment.
+                \item Built entire inventory management system from ground up, both physically and in software, until integration with custom ERP system.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.35 cm}
+
+        \begin{twocolentry}{
+        \textit{Gainesville, FL}    
+            
+        \textit{Sep 2018 – July 2019}}
+            \textbf{Mechanical Engineering Intern}
+            
+            \textit{Altavian}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Designed and validated thermal management system for a military drone system, reducing internal peak temperatures by 8\%.
+                \item Developed MIL-SPEC cable harness overmolds for military drone base station and controller assembly, contributing to total quality management and weather resistance.
+                \item Automated BOM documentation for DoD using SolidWorks macros, implementing process improvements that reduced manual intervention and improved efficiency.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.35 cm}
+
+        \begin{twocolentry}{
+        \textit{Boca Chica, TX}    
+            
+        \textit{June 2020 – October 2020}}
+            \textbf{Starship Integration Technician}
+            
+            \textit{SpaceX}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Installed cryogenic fuel systems, avionics, and hydraulics for Starship second stage vehicles SN5–SN12, utilizing technical schematics and engineering blueprints.
+                \item Utilized Siemens NX to improve manufacturing processes for LOX downcomer installation, reducing assembly time by several hours through process improvements.
+            \end{highlights}
+        \end{onecolentry}
+
+
+\vspace{0.4 cm}
+
+
+    
+    \section{Skills}
+
+        \begin{onecolentry}
+            \textbf{Manufacturing Engineering \& Production:} Production engineering, manufacturing engineering, technical work instructions, process improvements, LEAN Six Sigma manufacturing, RCCA processes, manufacturing environment, electro-mechanical assemblies, automation, process development, troubleshooting, cross-functional teaming.
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Engineering \& Design:} Engineering blueprints, parts lists, technical drawings, mechanical drawings, SolidWorks (primary CAD software), GD\&T (Geometric Dimensioning and Tolerancing), tool design, assembly procedures, manufacturing documentation, process optimization, quality management.
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Regulatory \& Compliance:} 21 CFR 820, 21 CFR 812, MIL-SPEC standards, regulatory compliance, total quality management, validation protocols, cleanroom operations, DoD suppliers.
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Software \& Systems:} SolidWorks (primary CAD software), ERP systems, Microsoft Office suite, inventory management systems, automation programming, technical documentation software.
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Manufacturing Equipment:} CNC mills and lathes, microfabrication equipment, probe stations, automation systems, pressurized gas systems, manufacturing stations, assembly equipment, cryogenic systems, avionics, hydraulics.
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Project Management \& Leadership:} Team management, cross-functional teaming, project planning, budget management, vendor relations, customer interaction, business outcomes, process reengineering.
+        \end{onecolentry}
+
+
+    
+
+\end{document}
