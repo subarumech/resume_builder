@@ -38,7 +38,10 @@ Example questions you could ask:
 
 ### 4. Resume Creation Guidelines
 - **Include ALL positions** from my_achievements.md in every resume
-- **Bullet point limits**: Maximum 4 bullets for the 2 most important positions, maximum 3 bullets for all other positions
+- **CRITICAL BULLET POINT LIMITS**: 
+  - **Maximum 4 bullets** for the 2 most important/relevant positions
+  - **Maximum 3 bullets** for all other positions
+  - **NEVER exceed these limits** - quality over quantity
 - Rewrite achievement bullets to maximize ATS keyword density
 - Prioritize skills that match job requirements exactly
 - Use the same terminology as the job posting when describing my experience
@@ -59,6 +62,40 @@ Example questions you could ask:
 - Ask clarifying questions to extract maximum keyword potential
 - **File Organization**: Place finished resumes in folders organized by employer name, with files named using the standard format: `[JobID]_[PositionTitle].tex` (e.g., `12345_Senior_Software_Engineer.tex` or `Senior_Project_Manager.tex` if no Job ID is available). If a folder for the specific employer does not exist, create one to organize the resume properly.
 - **PDF Title**: The LaTeX `\pdftitle{}` should match the .tex filename (e.g., for `696298BR_Manufacturing_Engineer.tex`, use `\pdftitle{696298BR_Manufacturing_Engineer}`).
+
+## Resume Formatting Rules
+
+### Contact Information
+- **Email**: Always use `michaelanthonymoranjr@gmail.com` for all resumes
+- **Spacing**: Use `\vspace{0.25 cm}` between contact information and Professional Summary section (reduced from 0.40 cm)
+
+### Job Entry Formatting
+- **Two-column layout**: Dates and location in right column, job title and company in left column
+- **Right column**: Dates on first line, location on second line
+- **Left column**: Job Title on first line, Company Name on second line
+- **CRITICAL: Right column must be double width** - Use `\setcolumnwidth{\fill, 9.0 cm}` instead of the default 4.5cm
+- **Structure**:
+  ```
+  \begin{twocolentry}{
+  \textit{Dates}
+  
+  \textit{Location}}
+      \textbf{Job Title}
+      
+      \textit{Company Name}
+  \end{twocolentry}
+  ```
+
+### Content Guidelines
+- **Include ALL positions** from my_achievements.md in every resume
+- **CRITICAL BULLET POINT LIMITS**: 
+  - **Maximum 4 bullets** for the 2 most important/relevant positions
+  - **Maximum 3 bullets** for all other positions
+  - **NEVER exceed these limits** - quality over quantity
+- **ATS optimization**: Work in as many relevant keywords as naturally possible
+- **Professional tone**: Formal but not overly verbose
+- **Action-result format**: "Did X which resulted in Y" structure
+- **Avoid repetitive phrases**: Don't end multiple sentences with the same phrase - vary sentence structure and integrate keywords naturally
 
 ## Remember
 Your goal is to help me get past the ATS filter by presenting my real achievements in the most keyword-rich, professionally optimized way possible. Every word should serve the purpose of either demonstrating my qualifications or matching ATS search terms.

@@ -3,7 +3,7 @@
 ## Personal Information
 - **Name**: Mike Moran
 - **Phone**: 941-894-8801
-- **Email**: michaelamoranwork@gmail.com
+- **Email**: michaelanthonymoranjr@gmail.com
 - **LinkedIn**: https://www.linkedin.com/in/michael-moran-fl/
 - **Location**: Orlando, FL
 
@@ -16,14 +16,16 @@ Project Manager, Mechanical Engineer, and Facility Coordinator. Proven ability t
 
 ## Job Experiences
 
-### CURIS System - Project Manager (March 2025 – Present) | Orlando, FL
+### CURIS System - Mechanical Engineer (August 2025 – Present) | Orlando, FL
+- Designed a product line from scratch. A portable sensor array to detect harmful gas. Did all of the mechanical, electrical, and software for it. And failure testing.
+- Directed in-house R&D for next-generation product development
+- Implemented R&D design processes for corporate alignment and ERP system integration
+
+### CURIS System - Project Manager (March 2025 – August 2025) | Orlando, FL
 - Managed engineering team of 5 people, mentoring two early-career engineers on mechanical design and fail-fast methodologies
 - Led efforts in scaling design and manufacturing operations with facility projects ranging from $200,000 to $20,000,000
-- Implemented R&D design processes for corporate alignment and ERP system integration
 - Interacted with external vendors and customers for project management and procurement
 - Directed multi-million dollar facility bio-decontamination system integrations
-- Directed in-house R&D for next-generation product development
-- Designed a product line from scratch. A portable sensor array. Did all of the mechanical, electrical, and software for it. And failure testing.
 
 ### MTronPTI - Manufacturing Engineer (Feb 2025 – March 2025) | Orlando, FL
 - Enhanced manufacturing processes for DoD suppliers
@@ -52,7 +54,7 @@ Project Manager, Mechanical Engineer, and Facility Coordinator. Proven ability t
 - Built N1 devices, tooling, and the manufacturing line itself. Utilized every tool imaginable, from microfab and probe stations to forklifts and lathes.
 
 ### SpaceX - Starship Integration Technician (June 2020 – October 2020) | Boca Chica, TX
-- Installed cryogenic fuel systems, avionics, and hydraulics for Starship second stage vehicles SN5–SN12.
+- Installed cryogenic fuel systems and avionics for Starship second stage vehicles SN5–SN12.
 - Utilized technical schematics and diagrams to build these ships.
 - Used Siemens NX to help improve manufacturing step of installing the LOX downcomer installation by several hours
 
@@ -68,13 +70,17 @@ Project Manager, Mechanical Engineer, and Facility Coordinator. Proven ability t
 Project planning and scheduling, lab management, employee leadership and mentorship, budget and cost control, risk management, production planning, production control, ERP systems
 
 ### Mechanical Engineering
-Rapid tooling and process design, advanced RCCA (Root Cause and Corrective Action) resolution, FEA, agile manufacturing design, product development, thermal management systems, design for manufacturing, assembly work instructions, GD&T (Geometric Dimensioning and Tolerancing)
+Rapid tooling and process design, advanced RCCA (Root Cause and Corrective Action) resolution, agile manufacturing design, product development, thermal management systems, design for manufacturing, assembly work instructions, GD&T (Geometric Dimensioning and Tolerancing)
+
+**Important Clarification**: No experience with stress analysis, structural design analysis, or FEA (Finite Element Analysis). Focus is on mechanical design, manufacturing, and systems integration rather than structural engineering analysis.
 
 ### Facilities / Construction
 Facility management/leadership, high-pressure gas systems, project management, cleanroom standards, OSHA safety protocols, HVAC, clean water systems, architectural design reviews, construction coordination and facilitation
 
 ### Manufacturing
-Sensitive electronics assembly, cleanroom experience, authoring work instructions, CNC mills/lathes, microfabrication equipment, cryogenics, hydraulics, lean manufacturing, production planning, heavy machinery, hand tools, lean six sigma, production control, MRP
+Sensitive electronics assembly, cleanroom experience, authoring work instructions, CNC mills/lathes, microfabrication equipment, cryogenics, lean manufacturing, production planning, heavy machinery, hand tools, lean six sigma, production control, MRP
+
+**Important Clarification**: No experience with hydraulics systems. Focus is on mechanical design, manufacturing, and systems integration rather than hydraulic engineering.
 
 ### Software
 SolidWorks (primary CAD software - no CREO/ProE experience), Microsoft Project, Microsoft Office (including Excel), Jira, Revit, Siemens NX, ERP systems, Python, Google Workspace, Visual Studio Code, Fusion.

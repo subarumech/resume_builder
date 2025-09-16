@@ -1,53 +1,105 @@
-Job ID: 698809BR
-Date posted: Jul. 24, 2025
 
-Description:
-You will be the Manufacturing Support Team Member for Missiles and Fire Control (MFC) in Orlando, FL.
+Start of main content
+What
+Job title, keywords, or company
+Where
+Orlando, FL
+Project Engineer
+XTI Aerospace
+Remote
+$110,000 - $120,200 a year - Full-time
+&nbsp;
+Profile insights
+Here’s how the job qualifications align with your profile.
+Skills
 
-What You Will Be Doing
-As a Manufacturing Support Team Member, you will play a key role in supporting our production, business, and other processes, collaborating across various functions to drive efficiency, quality, and innovation. Your responsibilities will include:
-• Facilitating self-directed work teams and providing training in core skill areas to teams and peers
-• Interacting with internal and external customers to resolve problems, improve processes, and plan products
-• Contributing to production planning and control, total quality management, and process reengineering efforts
-• Collaborating with manufacturing, equipment, and facilities engineering, material management, and systems teams to drive business outcomes
-• Analyzing and improving processes to increase efficiency, quality, and customer satisfaction
+Regulatory compliance
 
-Why Join Us
-We're looking for a collaborative and innovative Manufacturing Support Team Member to join our team. As a detail-oriented and customer-focused individual, you will have the opportunity to work with a dynamic team and drive business outcomes. If you're a team player who is passionate about improving processes and driving efficiency, we encourage you to apply. This role offers a unique opportunity to work in a fast-paced and supportive environment, and to develop your skills in a variety of areas, including production planning, quality management, and process improvement.
+CAD software
 
-We are committed to supporting your work-life balance and overall well-being, offering flexible scheduling options Learn more about Lockheed Martin’s comprehensive benefits package here.
+Technical Proficiency
++ show more
 
-Further Information About This Opportunity:
-This position is in Orlando. Discover more about our Orlando, Florida location.
-Basic Qualifications:
-Bachelors degree with 2 to 4 years working in a manufacturing environment as an individual contributor or equivalent experience/combined education
-Communication and teaming skills
-Displays leadership traits without direct L coded responsibility
-Must be a U.S. citizen and have the ability to obtain a Secret security clearance
-Desired Skills:
-Bachelors degree from an accredited college in a related discipline, or equivalent experience/combined education.
-Ability to multi task
-Proficient in Microsoft Office suite
-Communication and teaming skills
-Experience working in a manufacturing environment
-Experience working in a union environment
-Security Clearance Statement: This position requires a government security clearance, you must be a US Citizen for consideration.
-Clearance Level: Secret
-Other Important Information You Should Know
-Expression of Interest: By applying to this job, you are expressing interest in this position and could be considered for other career opportunities where similar skills and requirements have been identified as a match. Should this match be identified you may be contacted for this and future openings.
-Ability to Work Remotely: Onsite Full-time: The work associated with this position will be performed onsite at a designated Lockheed Martin facility.
-Work Schedules: Lockheed Martin supports a variety of alternate work schedules that provide additional flexibility to our employees. Schedules range from standard 40 hours over a five day work week while others may be condensed. These condensed schedules provide employees with additional time away from the office and are in addition to our Paid Time off benefits.
-Schedule for this Position: 4x10 hour day, 3 days off per week
-Lockheed Martin is an equal opportunity employer. Qualified candidates will be considered without regard to legally protected characteristics.
-The application window will close in 90 days; applicants are encouraged to apply within 5 - 30 days of the requisition posting date in order to receive optimal consideration.
-At Lockheed Martin, we use our passion for purposeful innovation to help keep people safe and solve the world's most complex challenges. Our people are some of the greatest minds in the industry and truly make Lockheed Martin a great place to work.
+Do you have experience in Regulatory compliance?
+Education
 
-With our employees as our priority, we provide diverse career opportunities designed to propel, develop, and boost agility. Our flexible schedules, competitive pay, and comprehensive benefits enable our employees to live a healthy, fulfilling life at and outside of work. We place an emphasis on empowering our employees by fostering an inclusive environment built upon integrity and corporate responsibility.
+Bachelor’s degree in engineering
 
-If this sounds like a culture you connect with, you’re invited to apply for this role. Or, if you are unsure whether your experience aligns with the requirements of this position, we encourage you to search on Lockheed Martin Jobs, and apply for roles that align with your qualifications.
-Experience Level: Experienced Professional
-Business Unit: MISSILES AND FIRE CONTROL
-Relocation Available: Possible
-Career Area: Manufacturing
-Type: Full-Time
-Shift: First
+Bachelor's degree
+&nbsp;
+Job details
+Here’s how the job details align with your profile.
+Pay
+
+$110,000 - $120,200 a year
+Job type
+
+Full-time
+&nbsp;
+Full job description
+About XTI Aerospace:
+
+XTI Aerospace is a pioneering leader in xVTOL and powered-lift aircraft solutions. We’re developing the TriFan 600 which combines helicopter vertical takeoff and landing (VTOL) versatility with the speed, range, and comfort of a fixed-wing aircraft—to redefine regional air travel.
+
+Introducing the TriFan 600 – an xVTOL aircraft that takes off and lands like a helicopter and flies with the speed, range and comfort of an airplane. It’s about time.
+
+If you’re passionate about pioneering aerospace innovation, eager to work on projects that redefine the way we move, and ready to join a company where every role is an opportunity to change the world, then welcome aboard. Explore our career opportunities and be part of a team that’s not just dreaming of the future—we live it
+
+
+Job Summary:
+As a Project Engineer at XTI Aerospace, you will oversee the design, development, and implementation of innovative aircraft projects. Your role is pivotal in coordinating cross-functional teams, managing project timelines and budgets, and ensuring that every aspect of our aircraft development meets stringent aviation regulations and industry standards. You will drive technological advancement and contribute directly to our mission of revolutionizing air mobility.
+
+
+Key Responsibilities:
+
+Design & Development: Lead the design and development of aircraft systems and components.
+Project Management: Oversee project timelines, deliverables, and budgets to ensure successful project completion.
+Team Coordination: Collaborate with cross-functional teams to maintain project alignment and integration.
+Feasibility & Risk Analysis: Conduct feasibility studies, risk assessments, and performance evaluations to guide project decisions.
+Regulatory Compliance: Ensure that all projects adhere to aviation regulations and industry standards.
+Technical Support: Provide expert technical guidance to resolve project-related challenges.
+Reporting: Generate and maintain comprehensive project reports for engineering, manufacturing, and leadership teams.
+
+Required Qualifications:
+
+Bachelor’s degree in Aerospace Engineering, Mechanical Engineering, or a related field.
+5+ years of experience in aerospace project management.
+Proficiency in Microsoft and CAD software applications.
+Solid understanding of aerospace industry standards and regulations.
+Strong analytical, problem-solving, and leadership skills.
+Excellent communication and teamwork abilities.
+Experience with project management tools and methodologies.
+
+Salary range: $110,000- $120,000
+
+
+At XTI Aerospace, we are driven by innovation and the desire to reshape the future of air mobility. If you are passionate about cutting-edge aerospace technology and eager to make an impact on projects like the TriFan 600, we invite you to join our dynamic team. We offer a competitive benefits package, a collaborative work environment, and the opportunity to be at the forefront of sustainable aviation.
+
+XTI Aerospace is an equal opportunity employer committed to diversity and inclusion. All qualified applicants will be considered without regard to race, color, religion, gender, gender identity, sexual orientation, national origin, disability, or veteran status.
+
+To apply, please submit your resume outlining your qualifications and experience. We look forward to exploring how you can contribute to our journey toward a more sustainable and innovative future in aviation.
+
+Note to Recruiters: XTI Aerospace does not accept unsolicited resumes or referrals from placement agencies, staffing vendors or other external parties seeking recruiting fees without a signed formal agreement.
+
+&nbsp;
+If you require alternative methods of application or screening, you must approach the employer directly to request this as Indeed is not responsible for the employer's application process.
+&nbsp;
+Project Engineer jobs in Remote
+Jobs at XTI Aerospace in Remote
+Project Engineer salaries in Remote
+Hiring Lab
+Career advice
+Browse jobs
+Browse companies
+Salaries
+Indeed Events
+Work at Indeed
+Countries
+About
+Help
+ESG at Indeed
+© 2025 Indeed
+Your Privacy Choices 
+Accessibility at Indeed
+Privacy Center and Ad Choices
+Terms

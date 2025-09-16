@@ -1,0 +1,400 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Mike Moran - Generic Resume},
+    pdfauthor={Mike Moran},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    % \usepackage[T1]{fontenc} % this breaks sb2nov
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small Mike Moran - Page \thepage{} of \pageref*{LastPage}}
+}{}{} % replace number by desired string
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\circ$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 5.0 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{}\hspace{\widthof{}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \placelastupdatedtext
+    \begin{header}
+        \textbf{\fontsize{24 pt}{24 pt}\selectfont Mike Moran}
+
+        \vspace{0.3 cm}
+
+        \normalsize
+        \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}Orlando, FL}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:michaelanthonymoranjr@gmail.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}michaelanthonymoranjr@gmail.com}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:+941-894-8801}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}941-894-8801}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/michael-moran-fl/}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}linkedin.com/in/michael-moran-fl}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+    \end{header}
+
+    \vspace{0.25 cm}
+
+
+    \section{Professional Summary}
+
+        
+        \begin{onecolentry}
+        
+            Mechanical Engineer and Project Manager with 4+ years of experience in advanced manufacturing, product development, and facility management. Proven track record in leading cross-functional teams, optimizing production processes, and delivering complex engineering projects on time and within budget. Expertise in CAD design, lean manufacturing, quality control, and regulatory compliance. Strong background in mechanical design, process improvement, and project management across aerospace, medical device, and defense industries.
+            
+        \end{onecolentry}
+
+        \vspace{0.3 cm}
+
+
+    
+
+    \section{Education}
+
+\vspace{0.2 cm}
+        
+        \begin{twocolentry}{
+            
+            
+        \textit{Aug 2017 – Dec 2021}}
+            \textbf{University of Florida}
+            
+            \textit{B.S. in Mechanical Engineering}
+        \end{twocolentry}
+
+        \vspace{0.15 cm}
+        
+
+\vspace{0.3 cm}
+
+    
+    \section{Professional Experience}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+        \textit{Aug 2025 – Present}
+        
+        \textit{Orlando, FL}}
+            \textbf{Mechanical Engineer}
+            
+            \textit{CURIS System}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Designed and developed portable sensor array product line from concept to production, integrating mechanical, electrical, and software systems for gas detection applications.
+                \item Led R\&D initiatives for next-generation product development, implementing design processes and ERP system integration for corporate alignment.
+                \item Conducted comprehensive failure testing and validation protocols to ensure product reliability and performance standards.
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.35 cm}
+
+        \begin{twocolentry}{
+        \textit{Mar 2025 – Aug 2025}
+        
+        \textit{Orlando, FL}}
+            \textbf{Project Manager}
+            
+            \textit{CURIS System}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Managed cross-functional engineering team of 5 professionals, providing technical leadership and mentorship in mechanical design and rapid prototyping methodologies.
+                \item Led facility expansion projects ranging from \$200,000 to \$20,000,000, coordinating with external vendors and stakeholders to ensure on-time delivery and budget compliance.
+                \item Directed multi-million dollar bio-decontamination system integrations, managing project schedules, risk assessment, and quality control protocols.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.35 cm}
+
+        
+        \begin{twocolentry}{
+        \textit{Feb 2025 – Mar 2025}
+        
+        \textit{Orlando, FL}}
+            \textbf{Manufacturing Engineer}
+            
+            \textit{MTronPTI}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Optimized manufacturing processes for DoD suppliers, implementing lean manufacturing principles and continuous improvement methodologies.
+                \item Created detailed technical drawings and assembly work instructions using SolidWorks with GD\&T standards, ensuring quality control and process standardization.
+                \item Designed and built custom manufacturing station for precision soldering operations on delicate oscillator assemblies, improving production efficiency and product quality.
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.35 cm}
+
+        \begin{twocolentry}{
+        \textit{Mar 2023 – Jun 2024}
+        
+        \textit{Austin, TX}}
+            \textbf{Production Facility Coordinator}
+            
+            \textit{Neuralink}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Directed construction and commissioning of advanced manufacturing facility with multi-million dollar budgets, achieving 10x increase in production capacity for medical device manufacturing.
+                \item Managed regulatory compliance with FDA standards (21 CFR 820, 21 CFR 812), ensuring facility met medical device manufacturing requirements and passed regulatory audits.
+                \item Led installation of cleanroom HVAC systems, medical-grade water systems, and three full-scale production lines, coordinating with external contractors and vendors.
+                \item Designed and implemented mechanical assemblies for handling delicate brain implants, including transport and mounting systems for production line integration.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.35 cm}
+
+        \begin{twocolentry}{
+        \textit{Mar 2022 – Mar 2023}
+        
+        \textit{Austin, TX}}
+            \textbf{Manufacturing Technician}
+            
+            \textit{Neuralink}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Performed manufacturing engineering functions, optimizing production processes using RCCA methodologies and reducing process deviations by up to 30\%.
+                \item Designed, built, and programmed custom pressurized gas system with auto-failover capabilities for cleanroom operations, ensuring continuous production uptime.
+                \item Developed comprehensive inventory management system from ground up, integrating physical and software components until ERP system integration.
+                \item Authored technical documentation including work instructions, validation protocols, and maintenance procedures for medical device assembly processes.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.35 cm}
+
+        \begin{twocolentry}{
+        \textit{Jun 2020 – Oct 2020}
+        
+        \textit{Boca Chica, TX}}
+            \textbf{Starship Integration Technician}
+            
+            \textit{SpaceX}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Installed critical systems including cryogenic fuel systems, avionics, and hydraulics for Starship second stage vehicles SN5–SN12.
+                \item Utilized technical schematics and engineering drawings to ensure precise system integration and quality control standards.
+                \item Applied Siemens NX CAD software to optimize manufacturing processes, reducing LOX downcomer installation time by several hours.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.35 cm}
+
+        \begin{twocolentry}{
+        \textit{Sep 2018 – Jul 2019}
+        
+        \textit{Gainesville, FL}}
+            \textbf{Mechanical Engineering Intern}
+            
+            \textit{Altavian}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Designed and validated thermal management system for military drone systems, achieving 8\% reduction in internal peak temperatures while meeting space constraints and environmental requirements.
+                \item Developed MIL-SPEC cable harness molds for military drone base station assembly, ensuring compliance with defense industry standards and quality requirements.
+                \item Automated BOM documentation processes using SolidWorks macros, reducing manual engineering intervention and improving documentation efficiency.
+            \end{highlights}
+        \end{onecolentry}
+
+
+\vspace{0.4 cm}
+
+
+    
+    \section{Technical Skills}
+
+        \begin{onecolentry}
+            \textbf{Engineering \& Design:} Mechanical design, product development, CAD modeling (SolidWorks, Siemens NX, Revit), GD\&T, FEA analysis, thermal management systems, rapid prototyping, design for manufacturing (DFM), technical documentation, engineering drawings.
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Manufacturing \& Production:} Lean manufacturing, continuous improvement, process optimization, quality control, RCCA (Root Cause and Corrective Action), work instructions, production planning, inventory management, cleanroom operations, medical device manufacturing.
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Project Management:} Cross-functional team leadership, project planning and scheduling, budget management, risk assessment, vendor coordination, stakeholder management, regulatory compliance (FDA, DoD), facility management, construction coordination.
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Software \& Systems:} SolidWorks, Siemens NX, Revit, Microsoft Project, Microsoft Office Suite, ERP systems, Python, Google Workspace, Jira, inventory management systems, technical documentation software.
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Industry Experience:} Aerospace, medical devices, defense contracting, cleanroom environments, cryogenic systems, hydraulics, avionics, regulatory compliance, facility construction, equipment installation, process validation.
+        \end{onecolentry}
+
+
+    
+
+\end{document}

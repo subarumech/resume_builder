@@ -1,0 +1,402 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={85347-364911KTS_Mechanical_Engineer},
+    pdfauthor={Mike Moran},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    % \usepackage[T1]{fontenc} % this breaks sb2nov
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small Mike Moran - Page \thepage{} of \pageref*{LastPage}}
+}{}{} % replace number by desired string
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\circ$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 9.0 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{}\hspace{\widthof{}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \placelastupdatedtext
+    \begin{header}
+        \textbf{\fontsize{24 pt}{24 pt}\selectfont Mike Moran}
+
+        \vspace{0.3 cm}
+
+        \normalsize
+        \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}Orlando, FL}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:michaelanthonymoranjr@gmail.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}michaelanthonymoranjr@gmail.com}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:+941-894-8801}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}941-894-8801}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/michael-moran-fl/}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}linkedin.com/in/michael-moran-fl}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+    \end{header}
+
+    \vspace{0.25 cm}
+
+
+    \section{Professional Summary}
+
+
+
+        
+        \begin{onecolentry}
+        
+            Mechanical Engineer with 4+ years of experience in complex mechanical systems design, manufacturing processes, and design for manufacturing. Proven expertise in CAD software including SolidWorks, technical drawings with GD\&T standards, and Python programming for engineering applications. Strong background in test planning and execution, risk management, and mechanical systems. Experienced in mechanical design methodologies and requirements specifications for defense and advanced technology applications.
+            
+        \end{onecolentry}
+
+        \vspace{0.3 cm}
+
+
+    
+
+    \section{Education}
+
+\vspace{0.2 cm}
+        
+        \begin{twocolentry}{
+            \textit{Aug 2017 – Dec 2021}
+            
+            \textit{Gainesville, FL}}
+            \textbf{B.S. in Mechanical Engineering}
+            
+            \textit{University of Florida}
+        \end{twocolentry}
+
+        \vspace{0.15 cm}
+        
+
+\vspace{0.3 cm}
+
+    
+    \section{Experience}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            \textit{August 2025 – Present}
+            
+            \textit{Orlando, FL}}
+            \textbf{Mechanical Engineer}
+            
+            \textit{CURIS System}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Designed complex mechanical systems and sensor array from scratch using CAD software and mechanical design methodologies, integrating mechanical, electrical, and software components for portable gas detection systems.
+                \item Applied design for manufacturing principles to sensor housing components, ensuring durability and manufacturability under various environmental conditions and operational requirements.
+                \item Executed formal test planning and execution for sensor array validation, including Factory Acceptance Testing (FAT) and Site Acceptance Testing (SAT) protocols.
+                \item Developed Python programming solutions for sensor array functionality and data analysis, demonstrating proficiency in scripting languages for engineering automation.
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.35 cm}
+
+        
+        \begin{twocolentry}{
+            \textit{March 2025 – August 2025}
+            
+            \textit{Orlando, FL}}
+            \textbf{Project Manager}
+            
+            \textit{CURIS System}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Managed engineering team of 5 people on complex mechanical systems projects, implementing risk management processes and requirements specifications for multi-million dollar facility integrations.
+                \item Led design for manufacturing initiatives across facility projects ranging from \$200,000 to \$20,000,000, collaborating with process engineers and systems engineers.
+                \item Directed R\&D design processes for corporate alignment and ERP system integration, ensuring compliance with project objectives and stakeholder requirements.
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.35 cm}
+
+        \begin{twocolentry}{
+            \textit{Feb 2025 – March 2025}
+            
+            \textit{Orlando, FL}}
+            \textbf{Manufacturing Engineer}
+            
+            \textit{MTronPTI}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Created technical drawings and 3D models using SolidWorks with GD\&T standards (ASME Y14.5), generating documentation for manufacturing and assembly processes.
+                \item Enhanced manufacturing processes for DoD suppliers, applying knowledge of common manufacturing methods and design for manufacturing principles.
+                \item Built precision mechanical systems from scratch for solder heating and component assembly, demonstrating expertise in materials and solid mechanics principles.
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.35 cm}
+
+        \begin{twocolentry}{
+            \textit{March 2023 – June 2024}
+            
+            \textit{Austin, TX}}
+            \textbf{Production Facility Coordinator}
+            
+            \textit{Neuralink}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Designed and integrated complex mechanical systems for medical device manufacturing facility, including HVAC systems, pressurized gas systems, and structural components with budgets in tens of millions.
+                \item Collaborated with process engineers, systems engineers, and facilities teams to ensure mechanical systems integration was feasible and achievable, managing interface control documents and system models.
+                \item Implemented risk management processes and quality management systems compliance, ensuring adherence to regulatory standards including 21 CFR 820 and 21 CFR 812.
+                \item Utilized CAD software including SolidWorks and Revit for facility design and mechanical assemblies, creating technical drawings and 3D models for construction and manufacturing integration.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.35 cm}
+
+        \begin{twocolentry}{
+            \textit{March 2022 – March 2023}
+            
+            \textit{Austin, TX}}
+            \textbf{Manufacturing Technician}
+            
+            \textit{Neuralink}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Performed functional analysis to decompose high-level requirements into detailed mechanical system functions, reducing process deviations by up to 30\% through systematic design improvements.
+                \item Designed and programmed custom mechanical systems including auto-failover pressurized gas systems, demonstrating expertise in mechanical systems design and materials selection.
+                \item Generated comprehensive technical documentation including work instructions, process maps, and maintenance protocols for complex mechanical assemblies and manufacturing processes.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.35 cm}
+
+        \begin{twocolentry}{
+            \textit{June 2020 – October 2020}
+            
+            \textit{Boca Chica, TX}}
+            \textbf{Starship Integration Technician}
+            
+            \textit{SpaceX}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Installed complex mechanical systems including cryogenic fuel systems and structural components for Starship vehicles, utilizing technical drawings and interface control documents.
+                \item Applied knowledge of materials and mechanical design principles to ensure proper integration of mechanical system elements under extreme operational conditions.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.35 cm}
+
+        \begin{twocolentry}{
+            \textit{Sep 2018 – July 2019}
+            
+            \textit{Gainesville, FL}}
+            \textbf{Mechanical Engineering Intern}
+            
+            \textit{Altavian}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Designed and validated thermal management systems for military applications, applying mechanical design principles to reduce internal peak temperatures by 8\% while meeting environmental requirements.
+                \item Created technical drawings and 3D models using SolidWorks, developing MIL-SPEC components and generating documentation for manufacturing processes and quality control.
+            \end{highlights}
+        \end{onecolentry}
+
+
+\vspace{0.4 cm}
+
+
+    
+    \section{Technical Skills}
+
+
+        \begin{onecolentry}
+            \textbf{CAD \& Design Software:} SolidWorks (primary), Revit, Siemens NX, technical drawings creation, 3D modeling, Model Based Design (MBD), interface control documents
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Engineering Standards \& Design:} GD\&T (ASME Y14.5, Y14.1), design for manufacturing, materials selection, solid mechanics principles, mechanical design methodologies
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Mechanical Systems:} HVAC systems, complex mechanical systems design, cryogenic systems, pressurized gas systems, thermal management systems
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Programming \& Automation:} Python (data analysis, automation, sensor programming), scripting languages, ERP systems integration
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Testing \& Quality:} Test planning and execution, Factory Acceptance Testing (FAT), Site Acceptance Testing (SAT), risk management processes, requirements specifications, quality management systems
+        \end{onecolentry}
+
+
+    
+
+\end{document}
